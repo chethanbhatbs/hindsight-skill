@@ -1,30 +1,69 @@
 # Self-Improve — Claude Code Skill
 
-Auto-invoked after every significant task completion. Captures mistakes, inefficiencies, and improvements so Claude gets smarter over time.
+Auto-invoked after every significant task. Captures mistakes, inefficiencies, and improvements so Claude gets smarter over time.
+
+## Prerequisites
+
+- [Claude Code](https://claude.ai/claude-code) CLI installed
+- GitHub CLI (`gh`) for one-line install
+
+## Installation
+
+**One-line install:**
+
+```bash
+gh repo clone chethanbhatbs/self-improve-skill ~/.claude/skills/self-improve
+```
+
+**Manual install:**
+
+```bash
+git clone https://github.com/chethanbhatbs/self-improve-skill.git
+cp -r self-improve-skill/ ~/.claude/skills/self-improve/
+```
+
+**Verify it's installed:**
+
+```bash
+ls ~/.claude/skills/self-improve/
+```
+
+You should see `SKILL.md` (and any other skill files).
 
 ## Usage
 
 ```
-/self-improve [task-description]
+/self-improve [task-description]    # Manually trigger a retro
 ```
 
-Runs automatically — never asks the user. Reflects on the completed task and records:
-- What went wrong (mistakes, wasted steps)
-- What went right (efficient patterns, good decisions)
-- What to do differently next time
-- Updates the retro log at `~/.claude/projects/*/memory/self_retro_log.md`
+### What it does
 
-## How it works
+Runs automatically after task completion — you don't need to invoke it. It:
 
-1. Reviews the conversation for mistakes and inefficiencies
-2. Identifies patterns to avoid or repeat
-3. Writes findings to the retro log
+1. Reviews the conversation for mistakes and wasted steps
+2. Identifies what went right (efficient patterns, good decisions)
+3. Records findings in `~/.claude/projects/*/memory/self_retro_log.md`
 4. Future conversations read the retro log to avoid repeating mistakes
 
-## Installation
+### Example retro entry
+
+```
+## 2026-04-09 — JSON Diff Setup
+- MISTAKE: Read entire 2000-line file when only needed lines 45-60
+- FIX: Use Grep first to find line numbers, then targeted Read
+- GOOD: Batched 3 independent tool calls in parallel
+```
+
+
+
+## How Claude Code Skills Work
+
+Skills are markdown files in `~/.claude/skills/` that give Claude Code specialized instructions for specific tasks. When you invoke a skill (e.g., `/Self-Improve`), Claude reads the `SKILL.md` and follows its instructions.
+
+## Uninstall
 
 ```bash
-cp -r self-improve ~/.claude/skills/
+rm -rf ~/.claude/skills/self-improve
 ```
 
 ## License
