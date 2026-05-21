@@ -12,20 +12,20 @@ Auto-invoked after every significant task. Captures mistakes, inefficiencies, an
 **One-line install:**
 
 ```bash
-gh repo clone chethanbhatbs/self-improve-skill ~/.claude/skills/self-improve
+gh repo clone chethanbhatbs/hindsight-skill ~/.claude/skills/hindsight
 ```
 
 **Manual install:**
 
 ```bash
-git clone https://github.com/chethanbhatbs/self-improve-skill.git
-cp -r self-improve-skill/ ~/.claude/skills/self-improve/
+git clone https://github.com/chethanbhatbs/hindsight-skill.git
+cp -r self-improve-skill/ ~/.claude/skills/hindsight/
 ```
 
 **Verify it's installed:**
 
 ```bash
-ls ~/.claude/skills/self-improve/
+ls ~/.claude/skills/hindsight/
 ```
 
 You should see `SKILL.md` (and any other skill files).
@@ -63,7 +63,7 @@ Skills are markdown files in `~/.claude/skills/` that give Claude Code specializ
 ## Uninstall
 
 ```bash
-rm -rf ~/.claude/skills/self-improve
+rm -rf ~/.claude/skills/hindsight
 ```
 
 ## License
