@@ -1,4 +1,4 @@
-# Self-Improve — Claude Code Skill
+# Self-Improve - Claude Code Skill
 
 Auto-invoked after every significant task. Captures mistakes, inefficiencies, and improvements so Claude gets smarter over time.
 
@@ -33,12 +33,12 @@ You should see `SKILL.md` (and any other skill files).
 ## Usage
 
 ```
-/self-improve [task-description]    # Manually trigger a retro
+/self-improve [task-description] # Manually trigger a retro
 ```
 
 ### What it does
 
-Runs automatically after task completion — you don't need to invoke it. It:
+Runs automatically after task completion - you don't need to invoke it. It:
 
 1. Reviews the conversation for mistakes and wasted steps
 2. Identifies what went right (efficient patterns, good decisions)
@@ -48,7 +48,7 @@ Runs automatically after task completion — you don't need to invoke it. It:
 ### Example retro entry
 
 ```
-## 2026-04-09 — JSON Diff Setup
+## 2026-04-09 - JSON Diff Setup
 - MISTAKE: Read entire 2000-line file when only needed lines 45-60
 - FIX: Use Grep first to find line numbers, then targeted Read
 - GOOD: Batched 3 independent tool calls in parallel
@@ -69,5 +69,5 @@ rm -rf ~/.claude/skills/hindsight
 ---
 
 <p align="center">
-  <sub>Built with <a href="https://emergent.sh">Emergent</a> + <a href="https://claude.ai/code">Claude Code</a> · refined by hand</sub>
+ <sub>Built with <a href="https://emergent.sh">Emergent</a> + <a href="https://claude.ai/code">Claude Code</a> · refined by hand</sub>
 </p>
